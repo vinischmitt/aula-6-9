@@ -1,9 +1,19 @@
-import { useState} from 'react';
+import { FormEvent, useState} from 'react';
+
+import {
+  signInWhithEmailAndPassword
+} from "firebase/auth";
+import { auth } from '../Services/firebase';
+
 
 export function Login() {
   const [usuario, setUsuario] = useState('')
   const [senha, setSenha] = useState('');
 
+    function handleLogin(e:FormEvent){
+      e.preventDefault();
+      signInWhithEmailAndPassword(auth)
+    }
   
   return (
     <>
