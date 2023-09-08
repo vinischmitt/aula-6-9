@@ -7,8 +7,9 @@ html,body{
 background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,0,0,1) 35%, rgba(97,5,5,1) 100%);
 }
 a{
-  background-color: black;
-  color: white;
+  background-color: ;
+  color: black;
+  font-weight: bold
 }
 .box-login {
   background: rgba(230, 100, 100, 0.8);

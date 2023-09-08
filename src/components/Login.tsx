@@ -17,6 +17,13 @@ export function Login() {
         <label>Senha: </label>
         <input onChange={(e) => setSenha(e.target.value)} value={senha} type="password"/>
         </div>
+
+        <div>
+          <button>Acessar</button>
+          </div>
+          <div>Ainda nao tem conta?
+          <button>Que tal criar uma!</button>
+          </div>
     </form>
     </>
   )
