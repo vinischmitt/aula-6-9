@@ -1,7 +1,7 @@
 import { FormEvent, useState} from 'react';
 
 import {
-  signInWhithEmailAndPassword
+  signInWithEmailAndPassword
 } from "firebase/auth";
 import { auth } from '../Services/firebase';
 
@@ -12,7 +12,7 @@ export function Login() {
 
     function handleLogin(e:FormEvent){
       e.preventDefault();
-      signInWhithEmailAndPassword(auth)
+      signInWithEmailAndPassword(auth, usuario, senha)
     }
   
   return (
@@ -29,9 +29,9 @@ export function Login() {
         </div>
 
         <div>
-          <button>Acessar</button>
+          <button type='submit'>Acessar</button>
           </div>
-          <div>Ainda nao tem conta?
+          <div>Ainda não tem conta?
           <button>Que tal criar uma!</button>
           </div>
     </form>
