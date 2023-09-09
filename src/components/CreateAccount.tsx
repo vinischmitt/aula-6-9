@@ -36,7 +36,7 @@ export function CreateAccount() {
         </div>
 
         <div>
-          <button type='submit'>Acessar</button>
+          <button type='submit'>Criar minha conta</button>
           </div>
           <div>Já tem conta?
             <Link to="/login">
