@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import {getAuth} from 'firebase/auth';
 import  {getFirestore} from 'firebase/firestore';
+import {signInWithEmailAndPassword} from "firebase/auth";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -21,3 +22,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 export const auth = getAuth();
 export const db = getFirestore(app);
+
+export function signIn(usuario: string, senha: string) {
+  return signInWithEmailAndPassword(auth, usuario, senha);
+}
