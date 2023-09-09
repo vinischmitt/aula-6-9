@@ -11,6 +11,12 @@ export function Login() {
     function handleLogin(e:FormEvent){
       e.preventDefault();
       signIn( usuario, senha)
+      .then(() => {
+        alert('Bem-vindo!');
+      })
+      .catch((error) => {
+        alert('Usuario ou senha incorretos!');
+      });
     }
   
   return (
