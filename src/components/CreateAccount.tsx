@@ -1,8 +1,8 @@
 import { FormEvent, useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
-import {createUser } from '../../services/firebase';
+import {createUser } from '../services/firebase';
 
 export function CreateAccount() {
   const [usuario, setUsuario] = useState('')
@@ -18,7 +18,7 @@ export function CreateAccount() {
      })
      .catch((error)=> {
        console.log(error);
-       alert('Usuário/Senha incorreto!');
+       alert('nao foi possivel criar conta' + error.message);
      });
     }
 
