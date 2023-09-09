@@ -2,7 +2,7 @@ import { FormEvent, useState} from 'react';
 import { Link } from 'react-router-dom';
 
 
-import {signIn } from '../../Services/firebase';
+import {signIn } from '../../services/firebase';
 
 export function Login() {
   const [usuario, setUsuario] = useState('')
