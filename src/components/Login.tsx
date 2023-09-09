@@ -1,7 +1,7 @@
 import { FormEvent, useState} from 'react';
 
 
-import { auth } from '../Services/firebase';
+import { signIn } from '../Services/firebase';
 
 
 export function Login() {
@@ -10,7 +10,7 @@ export function Login() {
 
     function handleLogin(e:FormEvent){
       e.preventDefault();
-      signInWithEmailAndPassword(auth, usuario, senha)
+      signIn( usuario, senha)
     }
   
   return (
