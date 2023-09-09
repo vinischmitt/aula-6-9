@@ -12,7 +12,7 @@ export function Login() {
       e.preventDefault();
       signIn( usuario, senha)
       .then((credential) => {
-        alert('Bem-vindo!');
+        alert('Bem-vindo!' + credential.user.uid);
       })
       .catch((error) => {
         alert('Usuario ou senha incorretos!');
