@@ -1,24 +1,24 @@
 import { FormEvent, useState} from 'react';
 
 
-import { signIn } from '../Services/firebase';
+import {signIn } from '../../services/firebase';
 
-
-export function Login() {
+export function CreateAccount() {
   const [usuario, setUsuario] = useState('')
   const [senha, setSenha] = useState('');
 
-    function handleLogin(e:FormEvent){
+    function handleLogin(e: FormEvent){
       e.preventDefault();
-      signIn( usuario, senha)
-      .then((credential) => {
-        alert('Bem-vindo!' + credential.user.uid);
-      })
-      .catch((error) => {
-        alert('Usuario ou senha incorretos!');
-      });
+     signIn(usuario, senha)
+     .then((credential)=> {
+       alert('Bem-Vindo!' + credential.user.uid);
+     })
+     .catch((error)=> {
+       console.log(error);
+       alert('Usuário/Senha incorreto!');
+     });
     }
-  
+
   return (
     <>
     <form onSubmit={handleLogin}>
