@@ -1,5 +1,6 @@
 import { FormEvent, useState} from 'react';
 import { Link } from 'react-router-dom';
+import useLocalstorage from '../hooks/useLocalstorage';
 
 
 import {signIn } from '../services/firebase';
@@ -7,6 +8,7 @@ import {signIn } from '../services/firebase';
 export function Login() {
   const [usuario, setUsuario] = useState('')
   const [senha, setSenha] = useState('');
+  const [userId, setUserId] = useLocalstorage('userId','');
 
     function handleLogin(e: FormEvent){
       e.preventDefault();
