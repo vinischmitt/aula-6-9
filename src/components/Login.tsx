@@ -11,7 +11,7 @@ export function Login() {
     function handleLogin(e:FormEvent){
       e.preventDefault();
       signIn( usuario, senha)
-      .then(() => {
+      .then((credential) => {
         alert('Bem-vindo!');
       })
       .catch((error) => {
@@ -21,7 +21,7 @@ export function Login() {
   
   return (
     <>
-    <form>
+    <form onSubmit={handleLogin}>
       <div>
       <label> Usuário: </label>
       <input onChange={(e) => setUsuario(e.target.value)} value={usuario}/>
