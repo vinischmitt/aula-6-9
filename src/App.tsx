@@ -5,6 +5,7 @@ import { Home } from './pages/HomePage';
 
 
 import { Login } from './pages/LoginPage';
+import { UserPage } from './pages/UserPage';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,10 @@ const router = createBrowserRouter([
     element: <Login />,
   },
 {path: '/criarconta',
-element: <CreateAccountPage />
+element: <CreateAccountPage />,
+},
+{path: '/usuário',
+element: <UserPage />,
 },
 ]);
 
