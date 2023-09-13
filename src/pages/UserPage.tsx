@@ -5,8 +5,13 @@ export function UserPage() {
   const [movies, setMovies] = useState([]);
 
   async function handleLoadMovies() {
-    const data = await getDiscoverMovies();
-    setMovies(data.results);
+    try {
+      const data = await getDiscoverMovies();
+      console.log(data);
+      setMovies(data.results);
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   useEffect(() => {
@@ -15,14 +20,14 @@ export function UserPage() {
 
   return (
     <>
-      <h1>Fernet com coca</h1>
+      <h1>Bem-vindo!</h1>
       <hr />
-      <h2>Seus Favoritos</h2>
+      <h2>Seus favoritos</h2>
       <hr />
       <h2>Veja outros lançamentos</h2>
-      {movies?.map((movie) =>{
-        return <div>{movie.original_tittle} </div>
+      {movies?.map((movie) => {
+        return <div>{movie.original_title}</div>;
       })}
     </>
   );
-} 
+}
