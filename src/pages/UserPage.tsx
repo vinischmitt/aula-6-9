@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Filme } from '../components/Filme';
+import { Filme } from '../components/Filme/Filme';
 import { getDiscoverMovies } from '../services/moviedb';
 
 export function UserPage() {
