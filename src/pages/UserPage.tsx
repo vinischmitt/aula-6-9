@@ -13,7 +13,6 @@ export function UserPage() {
     handleLoadMovies();
   }, []);
 
-
   return (
     <>
       <h1>Fernet com coca</h1>
@@ -21,7 +20,9 @@ export function UserPage() {
       <h2>Seus Favoritos</h2>
       <hr />
       <h2>Veja outros lançamentos</h2>
-      <hr />
+      {movies?.map((movie) =>{
+        return <div>{movie.original_tittle} </div>
+      })}
     </>
   );
 } 
