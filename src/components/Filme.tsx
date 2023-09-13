@@ -11,6 +11,7 @@ export interface FilmeProps {
 export function Filme({ filme }: FilmeProps) {
   return (
     <>
+    <img src={'https://image.tmdb.org/t/p/w154/' + filme.poster_patch}/>
     <div>{filme.original_tittle} </div>
     </>
   );
