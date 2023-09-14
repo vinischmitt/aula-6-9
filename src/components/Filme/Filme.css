@@ -2,6 +2,12 @@
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(88,1,1,1) 14%, rgba(97,4,4,1) 91%);
   position: relative;
   border-radius: 0.5rem;
+  box-shadow: #00000044 10px 0 20px --10px;
+  transition: all ease-in-out 200ms;
+  transform-origin: center bottom;
+}
+.filme:hover {
+  transform: scale(1.05);
 }
 .filme img {
   width: 100%;
@@ -11,7 +17,7 @@
   display: block;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.397);
+  background: #00000055;
   color: #FFF;
   width: 2rem;
   height: 2rem;
@@ -22,4 +28,10 @@
   top: 0.5rem;
   left: 0.5rem;
   backdrop-filter: blur(10px);
+}
+.filme div {
+  padding: 1rem;
+}
+.filme div b {
+  display: block;
 }
