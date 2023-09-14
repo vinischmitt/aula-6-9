@@ -46,5 +46,5 @@ color: #FFF;
 padding: 0.5rem 1rem;
 backdrop-filter: blur(10px);
 border-radius: 0.5rem;
-
+transition: all ease-in-out 200ms;
 }
