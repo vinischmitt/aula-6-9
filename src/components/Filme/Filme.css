@@ -1,8 +1,24 @@
 .filme {
   background-color: rgb(73, 0, 0);
   position: relative;
+  border-radius: 0,5rem;
 }
 
-.filme {
-  
+.filme img {
+  width: 100%;
+  border-radius: 0,5rem;
+}
+.filme small {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  background: green;
+  color: aqua;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 0,5rem;
+  right: 0,5rem;
+  backdrop-filter: blur(10px);
 }
