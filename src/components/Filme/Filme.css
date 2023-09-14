@@ -35,3 +35,16 @@
 .filme div b {
   display: block;
 }
+.filme button{
+position: absolute;
+top:20%;
+left:50%;
+transform: translate(-50%);
+border: none;
+background: #00000088;
+color: #FFF;
+padding: 0.5rem 1rem;
+backdrop-filter: blur(10px);
+border-radius: 0.5rem;
+
+}
