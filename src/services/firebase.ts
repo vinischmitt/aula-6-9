@@ -42,6 +42,7 @@ export function CreateUser(usuario: string, senha: string) {
   return createUserWithEmailAndPassword(auth, usuario, senha);
 }
 
-export async AddDocument(){
-  
+export function AddItem(colecao: string, document: string, data: unknown){
+  const docRef = doc(db, colecao, document);
+  return setDoc(docRef, data);
 }
