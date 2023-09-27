@@ -6,15 +6,21 @@ export interface FilmeInterface {
   release_date: string;
   poster_path: string;
   vote_average: number;
+  id: string;
 }
 export interface FilmeProps {
   filme: FilmeInterface;
 }
 
-export function Filme({filme} : FilmeProps){
+export function Filme({filme} : FilmeProps) {
   function handleSaveMovie(){
-    AddItem("movies",)
-    alert('Filme salvo: ' +filme.original_title);
+    console.log(filme);
+    AddItem("movies", filme.id, filme).then(result => {
+      alert('Filme salvo: ' +filme.original_title);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   }
   
 
@@ -23,7 +29,7 @@ export function Filme({filme} : FilmeProps){
   <div className="filme">
   <img src={"https://image.tmdb.org/t/p/w154" + filme.poster_path}/>
   <small>{filme.vote_average} </small> 
-  <button>+ adicionar </button>
+  <button onClick={handleSaveMovie}>+ adicionar</button>
   <div> 
    <b> {filme.original_title} </b>
     {filme.release_date}
