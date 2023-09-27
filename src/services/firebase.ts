@@ -2,7 +2,18 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import {getAuth} from 'firebase/auth';
-import  {getFirestore} from 'firebase/firestore';
+import  {
+getFirestore,
+doc,
+setDoc,
+updateDoc,
+deleteDoc,
+getDocs,
+collection,
+query,
+where,
+onSnapshot,
+} from 'firebase/firestore';
 import {signInWithEmailAndPassword, createUserWithEmailAndPassword,} from "firebase/auth";
 
 // Your web app's Firebase configuration
@@ -29,4 +40,8 @@ export function signIn(usuario: string, senha: string) {
 
 export function CreateUser(usuario: string, senha: string) {
   return createUserWithEmailAndPassword(auth, usuario, senha);
+}
+
+export async AddDocument(){
+  
 }
