@@ -1,4 +1,5 @@
 import './Filme.css'
+import { db, AddItem } from '../../services/firebase';
 
 export interface FilmeInterface {
   original_title: string;
@@ -11,6 +12,12 @@ export interface FilmeProps {
 }
 
 export function Filme({filme} : FilmeProps){
+  function handleSaveMovie(){
+    AddItem("movies",)
+    alert('Filme salvo: ' +filme.original_title);
+  }
+  
+
   return (  
   <>
   <div className="filme">
