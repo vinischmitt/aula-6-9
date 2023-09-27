@@ -15,7 +15,7 @@ export interface FilmeProps {
 export function Filme({filme} : FilmeProps) {
   function handleSaveMovie(){
     console.log(filme);
-    AddItem("movies", filme.id, filme).then(result => {
+    AddItem("movies", String(filme.id), filme).then(result => {
       alert('Filme salvo: ' +filme.original_title);
     })
     .catch((error) => {
